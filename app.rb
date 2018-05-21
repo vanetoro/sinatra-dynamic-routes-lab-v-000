@@ -18,7 +18,7 @@ class App < Sinatra::Base
     str = ''
     binding.pry
     @num.times do
-      str += "#{@phrase} "
+      str + "#{@phrase} "
     end
   end
 end
