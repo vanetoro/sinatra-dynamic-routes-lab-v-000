@@ -28,12 +28,20 @@ class App < Sinatra::Base
   end
 
   get '/:operation/:number1/:number2' do
-    binding.pry
     @operation = params[:operation]
     @num1 = params[:number1].to_i
-    if @operation == add
-    total = num1 + num2\
-    "#{@total}"
+      if @operation == "add"
+        total = num1 + num2
+      elsif 
+        @operation == 'subtract'
+        total = num1 - num2 
+      elsif 
+        @operation == 'multiply'
+        total = num1 * num2
+      else
+        total = num1 / num2
+      end    
+      "#{total}"
   end
 
 end
