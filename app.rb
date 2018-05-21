@@ -26,4 +26,10 @@ class App < Sinatra::Base
     @str = params[:word1]+ " "+ params[:word2] +" "+ params[:word3]+" "+ params[:word4] +" "+ params[:word5]+"."
     "#{@str}"
   end
+
+  get '/operation/:number1/:number2' do
+    @total = params[:number1].to_i + params[:number1].to_i
+    "#{@total}"
+    
+  end
 end
