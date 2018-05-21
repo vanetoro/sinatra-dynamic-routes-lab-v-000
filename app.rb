@@ -27,9 +27,9 @@ class App < Sinatra::Base
     "#{@str}"
   end
 
-  get '/operation/:number1/:number2' do
-    @total = params[:number1].to_i + params[:number1].to_i
+  get '/:operation/:number1/:number2' do
+    @total = params[:number1].to_i params[:operation] params[:number1].to_i
     "#{@total}"
   end
-  
+
 end
