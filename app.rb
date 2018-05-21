@@ -30,7 +30,9 @@ class App < Sinatra::Base
   get '/:operation/:number1/:number2' do
     binding.pry
     @operation = params[:operation]
-    @total = params[:number1].to_i  + params[:number1].to_i
+    @num1 = params[:number1].to_i
+    if @operation == add
+    total = num1 + num2\
     "#{@total}"
   end
 
